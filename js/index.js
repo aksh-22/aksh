@@ -2,21 +2,21 @@ const navToggle = document.querySelector('.nav-toggle');
 const navLinks = document.querySelectorAll('.nav__link');
 const progress = document.querySelector('.progress-bars-wrapper');
 const progressBarPercents = [80, 75, 70, 65, 55, 50];
+const toggle = document.getElementById('toggle');
+const nav = document.getElementById('nav');
 
-navToggle.addEventListener('click', () => {
-	document.body.classList.toggle('nav-open');
-});
+toggle.addEventListener('click', () => nav.classList.toggle('active'));
+
+// navToggle.addEventListener('click', () => {
+// 	document.body.classList.toggle('nav-open');
+// });
 
 navLinks.forEach((link) => {
 	link.addEventListener('click', () => {
-		document.body.classList.remove('nav-open');
+		// document.body.classList.remove('nav-open');
+		nav.classList.remove('active');
 	});
 });
-
-// const navbar = document.querySelector('.navbar');
-// const navbarOffsetTop = navbar.offsetTop;
-// const sections = document.querySelectorAll('section');
-// const navbarLinks = document.querySelectorAll('.navbar-link');
 
 window.addEventListener('scroll', () => {
 	mainFn();

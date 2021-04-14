@@ -292,8 +292,8 @@ header {
 }
 
 .nav-mob ul li :hover,
-.nav-mob ul li .active {
-	color: var(--clr-accent);
+.nav-mob ul li a:active {
+	color: var(--clr-accent) !important;
 }
 
 @media (min-width: 600px) {
@@ -576,7 +576,7 @@ header {
 	background: #111;
 	color: var(--clr-accent);
 	text-align: center;
-	padding: 2.5em 0;
+	padding: 4em 0;
 	font-size: var(--fs-h3);
 }
 
@@ -612,4 +612,10 @@ header {
 
 .social-list__link {
 	padding: 0.5em;
+}
+
+@media (min-width: 300) {
+	.footer {
+		padding: 0.5em 0;
+	}
 }

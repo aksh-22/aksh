@@ -608,6 +608,12 @@ nav.active .icon .line2 {
 	opacity: 0.5;
 }
 
+/* cv download */
+.DownCV {
+	background-color: var(--clr-accent);
+	text-align: center;
+}
+
 /* footer */
 
 .footer {

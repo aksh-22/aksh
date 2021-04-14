@@ -7,10 +7,6 @@ const nav = document.getElementById('nav');
 
 toggle.addEventListener('click', () => nav.classList.toggle('active'));
 
-// navToggle.addEventListener('click', () => {
-// 	document.body.classList.toggle('nav-open');
-// });
-
 navLinks.forEach((link) => {
 	link.addEventListener('click', () => {
 		// document.body.classList.remove('nav-open');
@@ -18,8 +14,10 @@ navLinks.forEach((link) => {
 	});
 });
 
-window.addEventListener('scroll', () => {
+window.addEventListener('scroll', (e) => {
+	e.preventDefault();
 	mainFn();
+	return false;
 });
 
 const mainFn = () => {
@@ -35,5 +33,5 @@ const mainFn = () => {
 mainFn();
 
 window.addEventListener('resize', () => {
-	window.location.reload();
+	// window.location.reload();
 });

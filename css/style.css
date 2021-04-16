@@ -217,14 +217,14 @@ header {
 	position: relative;
 	color: #000;
 	text-decoration: none;
-	font-size: 0.8em;
+	font-size: 1.5em;
 	margin: 0 0.8em;
 	font-weight: 900;
 	transition: transform 0.5s;
 }
 
 .nav-pc ul a:hover {
-	transform: scale(1.5);
+	transform: scale(1.2);
 }
 
 .icon {
@@ -552,19 +552,9 @@ header {
 	text-align: center;
 }
 
-.filter {
-	/* background-color: var(--clr-accent); */
-	/* width: 50em; */
-	/* height: 3em; */
-	display: block;
-	/* margin: 3em auto; */
-}
-
 .filter ul {
 	display: flex;
 	flex-wrap: wrap;
-	/* display: grid;
-	grid-template-columns: repeat(1fr); */
 	height: 100%;
 	width: 100%;
 	justify-content: center;
@@ -590,16 +580,25 @@ header {
 /* end of filter */
 
 .portfolio {
-	display: grid;
+	/* display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-	grid-gap: 1em;
+	grid-gap: 1em; */
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	height: auto;
+	/* justify-content: space-around; */
+	justify-content: center;
 }
 
 .portfolio__item {
-	background: var(--clr-accent);
+	/* background: var(--clr-accent); */
+	height: 8em;
+	width: 17em;
 	overflow: hidden;
 	transform-origin: center;
 	transition: all 1s;
+	margin: 0.5em;
 }
 
 .portfolio__img {

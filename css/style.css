@@ -544,11 +544,50 @@ header {
 
 /* MY Work */
 
+/* filter */
+
 .my-work {
 	background-color: var(--clr-dark);
 	color: var(--clr-light);
 	text-align: center;
 }
+
+.filter {
+	/* background-color: var(--clr-accent); */
+	/* width: 50em; */
+	/* height: 3em; */
+	display: block;
+	/* margin: 3em auto; */
+}
+
+.filter ul {
+	display: flex;
+	flex-wrap: wrap;
+	/* display: grid;
+	grid-template-columns: repeat(1fr); */
+	height: 100%;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+	padding: 0;
+}
+
+.filter ul li {
+	list-style-type: none;
+	margin: 0.5em;
+	border: 4px solid var(--clr-accent);
+	padding: 1em 1.5em;
+	transition: transform 0.5s;
+	font-weight: 700;
+}
+
+.filter ul li.active,
+.filter ul li:hover {
+	transform: scale(1.1);
+	background-color: var(--clr-accent);
+}
+
+/* end of filter */
 
 .portfolio {
 	display: grid;
@@ -559,6 +598,8 @@ header {
 .portfolio__item {
 	background: var(--clr-accent);
 	overflow: hidden;
+	transform-origin: center;
+	transition: all 1s;
 }
 
 .portfolio__img {
@@ -574,6 +615,11 @@ header {
 .portfolio__item:focus .portfolio__img {
 	transform: scale(1.2);
 	opacity: 0.5;
+}
+
+.portfolio__item.hide {
+	/* opacity: 0; */
+	height: 0;
 }
 
 /* cv download */

@@ -61,16 +61,6 @@ const createEl = (idTo) => {
 	return html;
 };
 
-const showAll = () => {
-	let html = `
-		<a href="${data.link[idTo]}" class="portfolio__item ${data.class[idTo]}">
-		<img src="img/${data.image[idTo]}" alt="" class="portfolio__img" />
-		</a>
-		`;
-	parent.insertAdjacentHTML('beforeend', html);
-	return html;
-};
-
 const showEl = (id) => {
 	const classArr = [];
 	const idArr = [];
@@ -95,7 +85,6 @@ const showEl = (id) => {
 			el.classList.add('show');
 		});
 	}, 300);
-	// console.log(idArr, classArr);
 };
 
 const deleteEl = () => {
@@ -114,18 +103,14 @@ const toggleClass = (e) => {
 
 document.addEventListener('click', (e) => {
 	const clickedId = e.target.id;
-	// let arr = document.querySelectorAll(`.${clickedId}`);
 	if (e.target.parentElement.classList == 'filterUl') {
 		toggleClass(e);
 		deleteEl();
-		// arr.forEach((el) => {
-		// 	el.classList.remove('show');
-		// });
 		showEl(clickedId);
+	} else if (clickedId === 'toggle') {
+		nav.classList.toggle('active');
 	}
 });
-
-toggle.addEventListener('click', () => nav.classList.toggle('active'));
 
 navLinks.forEach((link) => {
 	link.addEventListener('click', () => {
@@ -155,9 +140,6 @@ const mainFn = () => {
 		});
 	}
 };
-
 showEl('all');
-// if (window.pageYOffset + window.innerHeight >= work.offsetTop) {
-// }
 
 mainFn();

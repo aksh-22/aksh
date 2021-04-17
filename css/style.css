@@ -587,18 +587,28 @@ header {
 	flex-wrap: wrap;
 	width: 100%;
 	height: auto;
-	/* justify-content: space-around; */
 	justify-content: center;
+	transition: all 1s;
 }
 
 .portfolio__item {
 	/* background: var(--clr-accent); */
-	height: 8em;
+	/* height: 0em;
+	width: 0em; */
+	height: 0em;
 	width: 17em;
+	/* transform: scale(0); */
+	/* display: none; */
 	overflow: hidden;
 	transform-origin: center;
 	transition: all 1s;
 	margin: 0.5em;
+}
+
+.portfolio__item.show {
+	height: 8em;
+	/* width: 17em; */
+	/* transform: scale(1); */
 }
 
 .portfolio__img {

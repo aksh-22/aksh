@@ -2,23 +2,107 @@ const navToggle = document.querySelector('.nav-toggle');
 const navLinks = document.querySelectorAll('.nav__link');
 const navLinksMob = document.querySelectorAll('.nav__item-mob');
 const progress = document.querySelector('.progress-bars-wrapper');
-const progressBarPercents = [80, 75, 70, 65, 55, 50];
 const toggle = document.getElementById('toggle');
 const nav = document.getElementById('nav');
 const listItems = document.querySelectorAll('nav ul li');
 const sections = document.querySelectorAll('section');
+const parent = document.querySelector('.portfolio');
+const work = document.querySelector('#work');
+
 let arr = [];
 
-const master = (action, arr) => {
-	if (action === 'show') {
-		arr.forEach((e) => {
-			e.style.display = 'block';
+const progressBarPercents = [80, 75, 70, 65, 55, 50];
+const data = {
+	link: [
+		'https://github.com/aksh-22/forkify',
+		'https://github.com/aksh-22/news-grid-1',
+		'https://github.com/aksh-22/githubfinder',
+		'https://github.com/aksh-22/Hotel',
+		'https://github.com/aksh-22/micropost',
+		'https://github.com/aksh-22/pig-game',
+		'https://github.com/aksh-22/validation-form',
+		'https://github.com/aksh-22/weatherjs',
+		'https://github.com/aksh-22/portfolio',
+		'https://akash-mapty.netlify.app/',
+	],
+	class: [
+		'jsApi all',
+		'jsApi all',
+		'htmlCss all',
+		'js all',
+		'htmlCss all',
+		'js all',
+		'htmlCss all',
+		'jsApi all',
+		'htmlCss all',
+		'jsApi all',
+	],
+	image: [
+		'forkify.png',
+		'news-grid.jpg',
+		'Git-hub finder.jpg',
+		'Hotel.jpg',
+		'MicroPost.jpg',
+		'Pig-game.jpg',
+		'validation-form.jpg',
+		'weather.jpg',
+		'Portfolio-sample.jpg',
+		'mapty.png',
+	],
+};
+
+const createEl = (idTo) => {
+	let html = `
+		<a href="${data.link[idTo]}" class="portfolio__item ${data.class[idTo]}">
+		<img src="img/${data.image[idTo]}" alt="" class="portfolio__img" />
+		</a>
+		`;
+	parent.insertAdjacentHTML('beforeend', html);
+	return html;
+};
+
+const showAll = () => {
+	let html = `
+		<a href="${data.link[idTo]}" class="portfolio__item ${data.class[idTo]}">
+		<img src="img/${data.image[idTo]}" alt="" class="portfolio__img" />
+		</a>
+		`;
+	parent.insertAdjacentHTML('beforeend', html);
+	return html;
+};
+
+const showEl = (id) => {
+	const classArr = [];
+	const idArr = [];
+	data.class.forEach((el, idTo) => {
+		let newA = [];
+		newA = el.split(' ');
+		let check;
+		if (id !== 'all') {
+			check = newA[0];
+		} else {
+			check = newA[1];
+		}
+		// if (id!=='all') ? check=newA[0] : check = newA[1]
+		if (check === id) {
+			classArr.push(newA[0]);
+			idArr.push(idTo);
+			createEl(idTo, id);
+		}
+	});
+	setTimeout(() => {
+		document.querySelectorAll(`.${id}`).forEach((el) => {
+			el.classList.add('show');
 		});
-	} else if (action === 'hide') {
-		document.querySelectorAll('.all').forEach((el) => {
-			el.style.display = 'none';
-		});
-	}
+	}, 300);
+	// console.log(idArr, classArr);
+};
+
+const deleteEl = () => {
+	const portItem = document.querySelectorAll('.portfolio__item');
+	portItem.forEach((e) => {
+		e.parentNode.removeChild(e);
+	});
 };
 
 const toggleClass = (e) => {
@@ -29,13 +113,15 @@ const toggleClass = (e) => {
 };
 
 document.addEventListener('click', (e) => {
-	// console.log(e.target.id);
+	const clickedId = e.target.id;
+	// let arr = document.querySelectorAll(`.${clickedId}`);
 	if (e.target.parentElement.classList == 'filterUl') {
-		arr = document.querySelectorAll(`.${e.target.id}`);
-		// console.log(arr);
 		toggleClass(e);
-		master('hide');
-		master('show', arr);
+		deleteEl();
+		// arr.forEach((el) => {
+		// 	el.classList.remove('show');
+		// });
+		showEl(clickedId);
 	}
 });
 
@@ -69,5 +155,9 @@ const mainFn = () => {
 		});
 	}
 };
+
+showEl('all');
+// if (window.pageYOffset + window.innerHeight >= work.offsetTop) {
+// }
 
 mainFn();

@@ -27,7 +27,7 @@ const data = {
 	],
 	class: [
 		'jsApi all',
-		'jsApi all',
+		'htmlCss all',
 		'htmlCss all',
 		'js all',
 		'htmlCss all',

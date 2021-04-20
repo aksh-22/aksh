@@ -24,6 +24,7 @@ const data = {
 		'https://github.com/aksh-22/weatherjs',
 		'https://github.com/aksh-22/portfolio',
 		'https://akash-mapty.netlify.app/',
+		'https://github.com/aksh-22/simple-cards',
 	],
 	class: [
 		'jsApi all',
@@ -36,6 +37,7 @@ const data = {
 		'jsApi all',
 		'htmlCss all',
 		'jsApi all',
+		'node all',
 	],
 	image: [
 		'forkify.png',
@@ -48,6 +50,7 @@ const data = {
 		'weather.jpg',
 		'Portfolio-sample.jpg',
 		'mapty.png',
+		'simple-card.png',
 	],
 };
 

@@ -11,7 +11,7 @@ const work = document.querySelector('#work');
 
 let arr = [];
 
-const progressBarPercents = [80, 75, 70, 65, 55, 50];
+const progressBarPercents = [80, 75, 70, 65, 75, 70];
 const data = {
 	link: [
 		'https://github.com/aksh-22/forkify',

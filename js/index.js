@@ -25,6 +25,7 @@ const data = {
 		'https://github.com/aksh-22/portfolio',
 		'https://akash-mapty.netlify.app/',
 		'https://github.com/aksh-22/simple-cards',
+		'https://aksh-natours.herokuapp.com/',
 	],
 	class: [
 		'jsApi all',
@@ -37,6 +38,7 @@ const data = {
 		'jsApi all',
 		'htmlCss all',
 		'jsApi all',
+		'node all',
 		'node all',
 	],
 	image: [
@@ -51,6 +53,7 @@ const data = {
 		'Portfolio-sample.jpg',
 		'mapty.png',
 		'simple-card.png',
+		'natours.png',
 	],
 };
 

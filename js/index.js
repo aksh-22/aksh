@@ -11,7 +11,7 @@ const work = document.querySelector('#work');
 
 let arr = [];
 
-const progressBarPercents = [80, 75, 70, 65, 75, 72];
+const progressBarPercents = [80, 75, 70, 65, 55, 75, 72];
 const data = {
 	link: [
 		'https://github.com/aksh-22/forkify',
@@ -26,6 +26,7 @@ const data = {
 		'https://akash-mapty.netlify.app/',
 		'https://github.com/aksh-22/simple-cards',
 		'https://aksh-natours.herokuapp.com/',
+		'https://github.com/aksh-22/Movie-Tracker',
 	],
 	class: [
 		'jsApi all',
@@ -40,6 +41,7 @@ const data = {
 		'jsApi all',
 		'node all',
 		'node all',
+		'react all',
 	],
 	image: [
 		'forkify.png',
@@ -54,6 +56,7 @@ const data = {
 		'mapty.png',
 		'simple-card.png',
 		'natours.png',
+		'movie-tracker.png',
 	],
 };
 

@@ -592,13 +592,8 @@ header {
 }
 
 .portfolio__item {
-	/* background: var(--clr-accent); */
-	/* height: 0em;
-	width: 0em; */
 	height: 0em;
 	width: 17em;
-	/* transform: scale(0); */
-	/* display: none; */
 	overflow: hidden;
 	transform-origin: center;
 	transition: all 1s;
@@ -607,8 +602,6 @@ header {
 
 .portfolio__item.show {
 	height: 8em;
-	/* width: 17em; */
-	/* transform: scale(1); */
 }
 
 .portfolio__img {

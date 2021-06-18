@@ -2,256 +2,441 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Akash Portfolio Website</title>
+		<title>Akash</title>
 		<link
 			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css"
-		/>
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
-			integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc="
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+			integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
 			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
 		/>
+		<script>
+			// Initialize and add the map
+			function initMap() {
+				// The location of Uluru
+				var uluru = {
+					lat: 26.92207,
+					lng: 75.778885,
+				}; // The map, centered at Uluru
 
-		<link
-			href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap"
-			rel="stylesheet"
-		/>
+				var map = new google.maps.Map(document.getElementById('map'), {
+					zoom: 8,
+					center: uluru,
+				}); // The marker, positioned at Uluru
 
-		<link rel="stylesheet" href="css/style.css" />
+				var marker = new google.maps.Marker({
+					position: uluru,
+					map: map,
+				});
+			}
+		</script>
+		<!-- <link rel="stylesheet" href="./scss/main.scss" /> -->
+		<link rel="stylesheet" href="./script.d573be0b.css" />
 	</head>
-
 	<body>
-		<header>
-			<div class="logo">
-				<h2>&ltdevakash&gt</h3>
-			</div>
-			<nav id="nav" class="nav-pc">
-				<ul class="nav__list">
-					<li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
-					<li class="nav__item">
-						<a href="#about" class="nav__link">About me</a>
-					</li>
-					<li class="nav__item">
-						<a href="#skills" class="nav__link">My Skills</a>
-					</li>
-					<li class="nav__item">
-						<a href="#work" class="nav__link">My Work</a>
-					</li>
-				</ul>
-				<button class="icon" id="toggle">
-					<div class="line line1"></div>
-					<div class="line line2"></div>
-				</button>
-			</nav>
+		<section class="main">
+			<section class="sidebar">
+				<h1>AKASH</h1>
+				<div class="navbar">
+					<div class="nav-item home active">
+						<i class="fab fas fa-home nav-icon"></i>
+						<a href="" class="nav-text">Home</a>
+					</div>
+					<div class="nav-item about">
+						<i class="fab fas fa-user nav-icon"></i>
+						<a href="" class="nav-text">About</a>
+					</div>
+					<div class="nav-item skills">
+						<i class="fab fas fas fa-award nav-icon"></i>
+						<a href="" class="nav-text">Skills</a>
+					</div>
+					<div class="nav-item portfolio">
+						<i class="fas fa-briefcase nav-icon"></i>
+						<a href="" class="nav-text">Porfolio</a>
+					</div>
+					<div class="nav-item contact">
+						<i class="fas fa-envelope nav-icon"></i>
+						<a href="" class="nav-text">Contact</a>
+					</div>
+				</div>
+				<div class="copyright">
+					<p>&copy; Akash Khandelwal</p>
+				</div>
+				<div class="home-icons nav-social">
+					<a href="https://github.com/aksh-22"><i class="fab fa-github"></i></a>
+					<a href="https://github.com/aksh-22"
+						><i class="fab fa-twitter"></i
+					></a>
+					<a href="https://github.com/aksh-22"
+						><i class="fab fa-linkedin-in"></i
+					></a>
+				</div>
+			</section>
+			<section class="content">
+				<!-- Home page -->
 
-			<nav class="nav-mob">
-				<ul>
-					<li class="nav__item-mob active">
-						<a href="#home">
-							<i class="fas fa-home"></i>
-							<p>Home</p>
-						</a>
-					</li>
-					<li class="nav__item-mob">
-						<a href="#about">
-							<i class="fas fa-box"></i>
-							<p>About Me</p>
-						</a>
-					</li>
-					<li class="nav__item-mob">
-						<a href="#skills">
-							<i class="fas fa-award"></i>
-							<p>Skills</p>
-						</a>
-					</li>
-					<li class="nav__item-mob">
-						<a href="#work">
-							<i class="fas fa-laptop-code"></i>
-							<p>My Work</p>
-						</a>
-					</li>
-				</ul>
-			</nav>
-		</header>
+				<div class="content-home active content-item">
+					<div class="home-image">
+						<img src="./a.14a78b40.jpeg" alt="" />
+					</div>
+					<div class="home-typo">
+						<div class="home-text">
+							<h1>Akash <span class="theme-clr">Khandelwal</span></h1>
+							<p>
+								MERN Stact Web Developer & Engineer Specialized in Computer
+								Science
+							</p>
+						</div>
+						<div class="home-icons">
+							<a href="https://github.com/aksh-22"
+								><i class="fab fa-github"></i
+							></a>
+							<a href="https://github.com/aksh-22"
+								><i class="fab fa-twitter"></i
+							></a>
+							<a href="https://github.com/aksh-22"
+								><i class="fab fa-linkedin-in"></i
+							></a>
+						</div>
+					</div>
+				</div>
 
-		<!-- Introduction -->
-		<section class="intro" id="home">
-			<h1 class="section__title section__title--intro">
-				Hi, I am <strong>Akash Khandelwal</strong>
-			</h1>
-			<p class="section__subtitle section__subtitle--intro">front-end dev</p>
-			<img src="img/aksh.jpeg" alt="a picture of akash khandelwal smiling" /
-			class="intro__img">
+				<!-- About page -->
+
+				<div class="content-about content-item">
+					<div class="about-image">
+						<img src="./a.14a78b40.jpeg" alt="" />
+					</div>
+					<div class="abt">
+						<div class="about-text">
+							<h1>
+								Akash Khandelwal &
+								<span class="theme-clr">Web Developer</span>
+							</h1>
+							<p>
+								Full Stack Web Developer Hi there! I'm Akash Khandelwal from
+								jaipur(Raj.), India. I'm graduated from Arya Institute Of
+								Engineering And Technology , Kukas (jaipur) with first Division
+								(62%) in Computer Science And Engineering.
+							</p>
+						</div>
+						<div class="about-details">
+							<ul>
+								<li><span class="theme-clr">Birthday :</span>22.03.1999</li>
+								<li><span class="theme-clr">Age :</span>22</li>
+								<li>
+									<span class="theme-clr">Email :</span
+									>akashkhandelwal1999@gmail.com
+								</li>
+								<li>
+									<span class="theme-clr">Study :</span>Arya Institute Of
+									Engineering And Technology
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<!-- skills -->
+
+				<div class="content-skills content-item">
+					<div class="skill-tag">
+						<p class="content-portfolio-tag">Skills</p>
+					</div>
+					<div class="content-skills-FE">
+						<h1>Front-end Skills</h1>
+						<!-- <p>I Like to code things from sratch and enjoy bringing ideas to life in the browser</p> -->
+						<div class="content-skills-FE-lang">
+							<ul>
+								<li>
+									<p class="name">html</p>
+									<p class="percent">90%</p>
+									<div class="progress">
+										<span></span>
+									</div>
+								</li>
+								<li>
+									<p class="name">css</p>
+									<p class="percent">70%</p>
+									<div class="progress">
+										<span style="width: 70%"></span>
+									</div>
+								</li>
+								<li>
+									<p class="name">JS</p>
+									<p class="percent">75%</p>
+									<div class="progress">
+										<span style="width: 75%"></span>
+									</div>
+								</li>
+								<li>
+									<p class="name">REACT</p>
+									<p class="percent">65%</p>
+									<div class="progress">
+										<span style="width: 75%"></span>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="content-skills-BE">
+						<h1>Back-end Skills</h1>
+						<div class="content-skills-FE-lang">
+							<ul>
+								<li>
+									<p class="name">Node</p>
+									<p class="percent">60%</p>
+									<div class="progress">
+										<span style="width: 75%"></span>
+									</div>
+								</li>
+								<li>
+									<p class="name">Express js</p>
+									<p class="percent">65%</p>
+									<div class="progress">
+										<span style="width: 75%"></span>
+									</div>
+								</li>
+								<li>
+									<p class="name">mongo db</p>
+									<p class="percent">70%</p>
+									<div class="progress">
+										<span style="width: 75%"></span>
+									</div>
+								</li>
+								<li>
+									<p class="name">mongoose</p>
+									<p class="percent">70%</p>
+									<div class="progress">
+										<span style="width: 75%"></span>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="content-skills-tools">
+						<h1>Tools that i use</h1>
+						<ul>
+							<li><p>vs code</p></li>
+							<li><p>postman</p></li>
+							<li><p>github</p></li>
+							<li><p>firebase</p></li>
+							<li><p>figma</p></li>
+						</ul>
+					</div>
+				</div>
+
+				<!-- portfolio -->
+				<div class="content-portfolio content-item">
+					<p class="content-portfolio-tag">Porfolio</p>
+					<div class="content-portfolio-filter">
+						<h3>Creative Portfolio</h3>
+						<ul class="filter-navbar">
+							<li id="all"><a href="#" class="atag fil-active">All</a></li>
+							<li id="hcj"><a href="#" class="atag">HTML,CSS,JS</a></li>
+							<li id="ajax"><a href="#" class="atag">AJAX</a></li>
+							<li id="react"><a href="#" class="atag">REACT</a></li>
+							<li id="node"><a href="#" class="atag">NODE</a></li>
+							<li id="mern"><a href="#" class="atag">MERN</a></li>
+						</ul>
+					</div>
+					<div class="content-portfolio-projects">
+						<ul>
+							<li class="mern all active">
+								<div class="img">
+									<img src="./quikie.ea2e71d4.png" alt="" />
+								</div>
+								<div class="details">
+									<h1>quikie</h1>
+									<a href=""><i class="fas fa-globe"></i></a>
+									<a href="https://github.com/aksh-22/stock-front"
+										><i class="fab fa-github"></i
+									></a>
+									<a href="https://github.com/aksh-22/stock-backend"
+										><i class="fab fa-github"></i
+									></a>
+								</div>
+							</li>
+							<li class="react all active">
+								<div class="img">
+									<img src="./vinoca.0c82d398.png" alt="" />
+								</div>
+								<div class="details">
+									<h1>vinoca</h1>
+									<a href=""><i class="fas fa-globe"></i></a>
+									<a href=""><i class="fab fa-github"></i></a>
+								</div>
+							</li>
+							<li class="react all active">
+								<div class="img">
+									<img src="./movie-tracker.da1c60ac.png" alt="" />
+								</div>
+								<div class="details">
+									<h1>movie-tracker</h1>
+									<a href=""><i class="fas fa-globe"></i></a>
+									<a href="https://github.com/aksh-22/Movie-Tracker"
+										><i class="fab fa-github"></i
+									></a>
+								</div>
+							</li>
+							<li class="node all active">
+								<div class="img">
+									<img src="./natours.7151120a.png" alt="" />
+								</div>
+								<div class="details">
+									<h1>natours</h1>
+									<a href=""><i class="fas fa-globe"></i></a>
+									<a href="https://github.com/aksh-22/natours"
+										><i class="fab fa-github"></i
+									></a>
+								</div>
+							</li>
+							<li class="hcj all active">
+								<div class="img">
+									<img src="./Hotel.ffd347c8.jpg" alt="" />
+								</div>
+								<div class="details">
+									<h1>Hotel</h1>
+									<a href=""><i class="fas fa-globe"></i></a>
+									<a href="https://github.com/aksh-22/Hotel"
+										><i class="fab fa-github"></i
+									></a>
+								</div>
+							</li>
+							<li class="hcj all active">
+								<div class="img">
+									<img src="./mapty.9be44148.png" alt="" />
+								</div>
+								<div class="details">
+									<h1>Mapty</h1>
+									<a href="https://akash-mapty.netlify.app/"
+										><i class="fas fa-globe"></i
+									></a>
+									<a href="https://github.com/aksh-22/mapty"
+										><i class="fab fa-github"></i
+									></a>
+								</div>
+							</li>
+							<li class="hcj all active">
+								<div class="img">
+									<img src="./news-grid.28ee2c08.jpg" alt="" />
+								</div>
+								<div class="details">
+									<h1>News-grid</h1>
+									<a href=""><i class="fas fa-globe"></i></a>
+									<a href="https://github.com/aksh-22/news-grid-1"
+										><i class="fab fa-github"></i
+									></a>
+								</div>
+							</li>
+							<li class="hcj all active">
+								<div class="img">
+									<img src="./validation-form.96e218a8.jpg" alt="" />
+								</div>
+								<div class="details">
+									<h1>Validation-form</h1>
+									<a href=""><i class="fas fa-globe"></i></a>
+									<a href="https://github.com/aksh-22/validation-form"
+										><i class="fab fa-github"></i
+									></a>
+								</div>
+							</li>
+							<li class="ajax all active">
+								<div class="img">
+									<img src="./forkify.b3a552bb.png" alt="" />
+								</div>
+								<div class="details">
+									<h1>Forkify</h1>
+									<a href=""><i class="fas fa-globe"></i></a>
+									<a href="https://github.com/aksh-22/forkify"
+										><i class="fab fa-github"></i
+									></a>
+								</div>
+							</li>
+							<li class="ajax all active">
+								<div class="img">
+									<img src="./Git-hub finder.c87a47fd.jpg" alt="" />
+								</div>
+								<div class="details active">
+									<h1>github-finder</h1>
+									<a href=""><i class="fas fa-globe"></i></a>
+									<a href="https://github.com/aksh-22/githubfinder"
+										><i class="fab fa-github"></i
+									></a>
+								</div>
+							</li>
+							<li class="ajax all active">
+								<div class="img">
+									<img src="./MicroPost.ec267d19.jpg" alt="" />
+								</div>
+								<div class="details">
+									<h1>MicroPost</h1>
+									<a href=""><i class="fas fa-globe"></i></a>
+									<a href="https://github.com/aksh-22/micropost"
+										><i class="fab fa-github"></i
+									></a>
+								</div>
+							</li>
+							<li class="ajax all active">
+								<div class="img">
+									<img src="./weather.537af0b3.jpg" alt="" />
+								</div>
+								<div class="details">
+									<h1>weather</h1>
+									<a href=""><i class="fas fa-globe"></i></a>
+									<a href="https://github.com/aksh-22/weatherjs"
+										><i class="fab fa-github"></i
+									></a>
+								</div>
+							</li>
+
+							<li class="node all active">
+								<div class="img">
+									<img src="./simple-card.3916f62a.png" alt="" />
+								</div>
+								<div class="details">
+									<h1>simple-card</h1>
+									<a href=""><i class="fas fa-globe"></i></a>
+									<a href="https://github.com/aksh-22/simple-cards"
+										><i class="fab fa-github"></i
+									></a>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<!-- contact -->
+
+				<div class="content-contact content-item">
+					<div class="contact-tag">
+						<p class="content-portfolio-tag">Contact</p>
+						<h1>Get In Touch</h1>
+					</div>
+					<div class="content-contact-map">
+						<div id="map"></div>
+					</div>
+					<form class="content-contact-form">
+						<input type="text" name="Name" placeholder="name" id="" />
+						<input type="email" name="" placeholder="Email" id="" />
+						<input
+							type="text"
+							name=""
+							placeholder="message"
+							id=""
+							class="message"
+						/>
+						<input type="submit" value="Send Message" class="btn" />
+					</form>
+				</div>
+			</section>
 		</section>
-
-		<!-- About me -->
-		<section class="about-me" id="about">
-			<h2 class="section__title section__title--about">Who I am</h2>
-			<p class="section__subtitle section__subtitle--about">
-				Full Stack Web Developer
-			</p>
-
-			<div class="about-me__body">
-				<p>
-					Hi there! I'm Akash Khandelwal from jaipur(Raj.), India. I'm graduated
-					from Arya Institute Of Engineering And Technology , Kukas (jaipur)
-					with first Division (62%) in Computer Science And Engineering.
-				</p>
-				<p>
-					I have Knowledge of programming languages such as Html5 , CSS3 , SASS
-					JavaScript , NodeJS with database MongoDB and some basic Knowledge
-					about ReactJS , React Native And I'm familiar with tools e.g. NPM ,
-					Webpack , Postman , chromium debugger
-				</p>
-			</div>
-
-			<img
-				src="img/aksh-stand.jpeg"
-				alt="Jane leaning against a bus"
-				class="about-me__img"
-			/>
-		</section>
-
-		<!-- skills -->
-		<section class="my-skills" id="skills">
-			<h1 class="section__title section__title--skills">My Skills</h1>
-			<div class="progress-bars-wrapper">
-				<div class="progress-bar">
-					<p class="progress-text">
-						HTML
-						<span></span>%
-					</p>
-					<div class="progress-percent"></div>
-				</div>
-				<div class="progress-bar">
-					<p class="progress-text">
-						CSS
-						<span></span>%
-					</p>
-					<div class="progress-percent"></div>
-				</div>
-				<div class="progress-bar">
-					<p class="progress-text">
-						JavaScript
-						<span></span>%
-					</p>
-					<div class="progress-percent"></div>
-				</div>
-				<div class="progress-bar">
-					<p class="progress-text">
-						SASS
-						<span></span>%
-					</p>
-					<div class="progress-percent"></div>
-				</div>
-				<div class="progress-bar">
-					<p class="progress-text">
-						React
-						<span></span>%
-					</p>
-					<div class="progress-percent"></div>
-				</div>
-				<div class="progress-bar">
-					<p class="progress-text">
-						NodeJS
-						<span></span>%
-					</p>
-					<div class="progress-percent"></div>
-				</div>
-				<div class="progress-bar">
-					<p class="progress-text">
-						MongoDB
-						<span></span>%
-					</p>
-					<div class="progress-percent"></div>
-				</div>
-			</div>
-			<div class="services">
-				<div class="service">
-					<i class="far fa-lightbulb"></i>
-					<h2 class="service-heading">Creative</h2>
-				</div>
-				<div class="service">
-					<i class="fas fa-cut"></i>
-					<h2 class="service-heading">Problem Solving</h2>
-				</div>
-				<div class="service">
-					<i class="fas fa-tachometer-alt"></i>
-					<h2 class="service-heading">Fast</h2>
-				</div>
-				<div class="service">
-					<i class="fas fa-rocket"></i>
-					<h2 class="service-heading">Dynamic</h2>
-				</div>
-			</div>
-		</section>
-		<!-- End of Section 2 -->
-
-		<!-- My Work -->
-		<section class="my-work" id="work">
-			<h2 class="section__title section__title--work">My work</h2>
-			<p class="section__subtitle section__subtitle--work">
-				A selection of my range of work
-			</p>
-
-			<div class="filter">
-				<ul class="filterUl">
-				<li class="active tag" id="all">ALL</li>
-				<li class="tag" id="htmlCss">HTML WITH CSS</li>
-				<li class="tag" id="js">JS</li>
-				<li class="tag" id="jsApi">JS WITH API</li>
-				<li class="tag" id="react">REACT</li>
-				<li class="tag" id="node">NODE JS</li>
-				</ul>
-			</div>
-
-			<div class="portfolio"></div>
-		</section>
-
-		<!-- download CV -->
-
-		<section class="DownCV">
-			<h3>
-				Download my cv from
-				<a href="./resourse/Akash's Resume.pdf" download="Akash's resume"
-					>here</a
-				>
-			</h3>
-		</section>
-
-		<!-- Footer -->
-		<footer class="footer">
-			<a href="mailto:akashkhandelwal1999@gmail.com" class="footer__link"
-				>akashkhandelwal1999@gmail.com</a
-			>
-			<ul class="social-list">
-				<li class="social-list__item">
-					<a class="social-list__link" href="https://codepen.io">
-						<i class="fab fa-codepen"></i>
-					</a>
-				</li>
-				<li class="social-list__item">
-					<a class="social-list__link" href="http://dribbble.com">
-						<i class="fab fa-dribbble"></i>
-					</a>
-				</li>
-				<li class="social-list__item">
-					<a class="social-list__link" href="https://twitter.com">
-						<i class="fab fa-twitter"></i>
-					</a>
-				</li>
-				<li class="social-list__item">
-					<a class="social-list__link" href="https://github.com">
-						<i class="fab fa-github"></i>
-					</a>
-				</li>
-			</ul>
-		</footer>
-
-		<script src="./js/index.js"></script>
-		<!-- <script src="./js/project.js"></script> -->
 	</body>
+	<script
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJ8JaRYtLaANOIQf51iUu-jEja-GTQDjM&callback=initMap&libraries=&v=weekly"
+		async=""
+	></script>
+	<script src="./script.d573be0b.js"></script>
 </html>
